@@ -8,7 +8,7 @@
 #   skip_final_snapshot     = true
 # }
 
-resource "aws_docdb_subnet_group" "main" {
+resource "aws_docdb_subnet_group" "main" {  
   name       = "${var.env}-docdb"
   subnet_ids = var.subnet_ids
 
