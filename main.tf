@@ -23,4 +23,3 @@ resource "aws_docdb_subnet_group" "main" {
 
 
 
-data "aws_kms_key" "key" {
