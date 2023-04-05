@@ -10,7 +10,8 @@ variable "tags" {}
 variable "storage_encrypted" {
     
     default = true      
-    
 }
 
+variable "no_of_instances" {}
+variable "instance_class"  {}
 
