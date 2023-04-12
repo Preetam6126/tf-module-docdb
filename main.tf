@@ -41,18 +41,18 @@ resource "aws_security_group" "main" {
     cidr_blocks      = ["0.0.0.0/0"]
     ipv6_cidr_blocks = ["::/0"]
   }
-
- tags   = merge(
-   var.tags,
-  { Name = "${var.name}-${var.env}-lb" }
-   )
+tags = merge(
+    var.tags,
+    { Name = "docdb-${var.env}" }
+  )
+ 
 }
 
 resource "aws_docdb_subnet_group" "main" {  
   name       = "${var.env}-docdb"
   subnet_ids = var.subnet_ids
-
-  tags   = merge(
+  
+ tags   = merge(
    var.tags,
   { Name = "${var.env}-subnet-group" }
    )
